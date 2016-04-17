@@ -1,6 +1,6 @@
 var plan = require('flightplan');
 
-var appName = 'bminSnake';
+var appName = 'Portfolio';
 var username = 'deploy';
 var password = 'adora11';
 var startFile = 'index.js';
