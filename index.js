@@ -15,8 +15,8 @@ app.get('/snake.html', function(req, res){
   res.sendFile(__dirname + '/snake.html');
 });
 
-http.listen(80, function() {
-  console.log('listening on port 80');
+http.listen(3000, function() {
+  console.log('listening on port 3000');
 });
 
 io.on('connection', function(socket){
