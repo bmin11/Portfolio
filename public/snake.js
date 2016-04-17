@@ -136,19 +136,19 @@ socket.on('change direction', function(e){
     a = 0;
   }
   //up
-  if(e.keyCode == 38) {
+  if(e.keyCode == 87) {
       heads[a].changeDirection(UP);
   }
   //right
-  else if(e.keyCode == 39) {
+  else if(e.keyCode == 68) {
       heads[a].changeDirection(RIGHT);
   }
   //down
-  else if(e.keyCode == 40) {
+  else if(e.keyCode == 83) {
       heads[a].changeDirection(DOWN);
   }
   //left
-  else if(e.keyCode == 37) {
+  else if(e.keyCode == 65) {
       heads[a].changeDirection(LEFT);
   }
 });
@@ -178,6 +178,10 @@ function tick() {
     heads[a].finalChange();
     var i = heads[a].i;
     var j = heads[a].j;
+    if (j < 0 || i < 0 || j > 31 || i > 31) {
+      winner[(a+1)%2] = true;
+      end = true;
+    }
     if (heads[a].currentDir == UP)
     {
         //Hit the edge
@@ -365,5 +369,7 @@ function tick() {
         }
       }
     }
+    heads[0].Draw();
+    heads[1].Draw();
   }
 }
