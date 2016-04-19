@@ -15,11 +15,6 @@ app.get('/snake.html', function(req, res){
   res.sendFile(__dirname + '/snake.html');
 });
 
-app.get('/snakeDoc.html'function(req, res){
-  app.use(express.static(__dirname + '/public'));
-  res.sendFile(__dirname + '/snakeDoc.html');
-);
-
 http.listen(3000, function() {
   console.log('listening on port 3000');
 });
